@@ -19,21 +19,20 @@
 
             </div>
 
-            <img src="media/gucci.jpeg" alt="CD cover not found" id="audio-cover">
+            <img src="images/" alt="CD cover not found" id="audio-cover">
             <h1 id="song-title">Gucci (feat MaWhoo)</h1>
             <p>Mthandeni SK</p>
 
-            <!--
                 <audio id="song"> 
-                    <source src="media/gucci.mp3" type="audio/mpeg">
+                    <source src="music/" type="audio/mpeg">
                 </audio>
-            -->
-            <input type="range" value="0" id="progress">
+
+                <input type="range" value="0" id="progress">
 
             <div class="music-contollers">
-                <button><i class="fa-solid fa-backward" id="back"></i></button>
+                <button onclick="prevSong()"><i class="fa-solid fa-backward" id="back"></i></button>
                 <button onclick="playPause()"><i class="fa-solid fa-play" id="play-icon"></i></button>
-                <button><i class="fa-solid fa-forward" id="next"></i></button>
+                <button onclick="nextSong()"><i class="fa-solid fa-forward" id="next"></i></button>
             </div>
         </div>
     </div>
