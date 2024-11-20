@@ -13,12 +13,17 @@
     justify-content: center;
     align-items: center;
 }
-
+.navigation .logo{
+    color: rgb(29, 182, 253) ;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
 .music-player{
     text-align: center;
     width: 400px;
     padding: 25px 35px;
-    background: #ffe0e5;
+    background: #d8c2c6;
 }
 
 .navigation{
@@ -90,12 +95,15 @@
     align-items: center;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 12px;
     box-shadow: 0 10px 20px rgba(156, 67, 230, 0.22);
     color: rgb(29, 182, 253);
     margin: 20px;
 }
+.music-contollers button i{
+    font-size: 30px;
 
+}
 .music-contollers button:nth-child(2){
     transform: scale(1.5);
     background: rgb(29, 182, 253);
