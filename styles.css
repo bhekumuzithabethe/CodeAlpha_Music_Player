@@ -19,7 +19,7 @@
 }
 .navigation .logo{
     display: flex;
-    margin: 0;
+    margin-bottom: -50px;
 }
 .navigation .logo h1{
     color: rgb(29, 182, 253) ;
@@ -129,3 +129,29 @@ footer{
     bottom: 0;
     margin-top: 10px;
 }
+
+.music-list{
+    display: none;
+    
+}
+.show.music-list{
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(29, 182, 253);
+    color: rgb(156, 67, 230);
+    top: 100px;
+    align-self: start;
+    height: 50vh;
+    width: 50vh;
+    position: fixed;
+
+}
+#my-music{
+    flex: 1;
+}
+.music-list li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+

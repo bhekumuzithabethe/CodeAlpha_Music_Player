@@ -17,29 +17,35 @@
     
     <div class="container">
         <div class="music-player">
+            
+            
             <div class="navigation">
-                <button><i class="bi bi-chevron-left"></i></button>
                 <div class="logo">
                     <img src="images/logo.png" alt="logo not found">
                     <h1 >Thabethe music</h1>
                 </div>
-                <button><i class="bi bi-list"></i></button>
-
+                <button onclick="toogleMusicList()"><i class="bi bi-list"></i></button>
+                
             </div>
-
+            <div class="music-list">
+                <ul id="my-music">
+                    <h1>My Music</h1>
+                </ul>
+            </div>
+            
             <img src="images/Gucci (feat MaWhoo).jpeg" alt="CD cover not found" id="audio-cover">
             <h1 id="song-title">Gucci (feat MaWhoo)</h1>
             <p id="artist">Mthandeni SK</p>
-
+            
                 <audio id="song"> 
                     <source src="music/Gucci (feat MaWhoo).mp3" type="audio/mpeg">
                 </audio>
 
                 <input type="range" value="0" id="progress">
-
-            <div class="music-contollers">
+                
+                <div class="music-contollers">
                 <button ><i class="bi bi-skip-backward-circle-fill" id="back"></i></button>
-                <button ><i class="fa-solid fa-pause" id="play-icon"></i></button>
+                <button ><i class="fa-solid fa-play" id="play-icon"></i></button>
                 <button ><i class="bi bi-skip-forward-circle-fill" id="next"></i></button>
             </div>
             <!--Footer-->

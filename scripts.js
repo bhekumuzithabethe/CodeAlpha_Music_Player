@@ -62,13 +62,15 @@ song.ontimeupdate = function () {
 // Playing and pausing the song
 function playPause() {
     if (play.classList.contains('fa-pause')) {
-        song.pause();
         play.classList.remove('fa-pause');
         play.classList.add('fa-play');
+        song.pause();
+
     } else {
-        song.play();
         play.classList.remove('fa-play');
         play.classList.add('fa-pause');
+        song.play();
+
     }
 }
 
@@ -76,4 +78,27 @@ function playPause() {
 next.addEventListener('click', nextSong);
 back.addEventListener('click', prevSong);
 play.addEventListener('click', playPause);
-song.addEventListener('ended', nextSong());
+song.addEventListener('ended', nextSong);
+
+const musicList = document.getElementById('my-music');
+
+songs.forEach((song, index) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+        ${index + 1}. ${song} - ${artitsts[index]}
+        <audio id="song-${index}">
+            <source src="music/${song}.mp3" type="audio/mpeg">
+        </audio>
+    `;
+    musicList.appendChild(listItem);
+
+    listItem.addEventListener('click', ()=>{
+        loadSong(songs[index],artitsts[index]);
+        playPause();
+    });
+});
+
+const showList = document.getElementsByClassName('music-list')[0];
+function toogleMusicList(){
+    showList.classList.toggle('show');
+};
