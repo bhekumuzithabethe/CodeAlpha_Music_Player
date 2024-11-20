@@ -5,15 +5,19 @@ let next = document.getElementById('next');
 let back = document.getElementById('back');
 let title = document.getElementById('song-title');
 let song_cover = document.getElementById('audio-cover');
+let artist = document.getElementById('artist');
 
 // Song titles
 const songs = ["Gucci (feat MaWhoo)", "Emabhukwini Amafa", "ZING'SHIYIL' EZIY' EMHLANGENI"];
+const artitsts = ["Mthandeni SK", "Saliwa", "Saliwa"];
+
 let songIndex = 0;
 
-loadSong(songs[songIndex]);
+loadSong(songs[songIndex],artitsts[songIndex]);
 
-function loadSong(songName) {
+function loadSong(songName,songArtist) {
     title.innerText = songName;
+    artist.innerText = songArtist;
     song.src = `music/${songName}.mp3`;
     song_cover.src = `images/${songName}.jpeg`;
 }
@@ -23,7 +27,8 @@ function prevSong() {
     if (songIndex < 0) {
         songIndex = songs.length - 1;
     }
-    loadSong(songs[songIndex]);
+    loadSong(songs[songIndex],artitsts[songIndex]);
+
     playPause();
 }
 
@@ -32,7 +37,7 @@ function nextSong() {
     if (songIndex > songs.length - 1) {
         songIndex = 0;
     }
-    loadSong(songs[songIndex]);
+    loadSong(songs[songIndex],artitsts[songIndex]);
     playPause();
 
 }
