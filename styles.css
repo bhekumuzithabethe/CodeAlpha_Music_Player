@@ -14,6 +14,9 @@
     justify-content: center;
     align-items: center;
 }
+.navigation i{
+    font-size: 23px;
+}
 .navigation .logo{
     display: flex;
     margin: 0;
