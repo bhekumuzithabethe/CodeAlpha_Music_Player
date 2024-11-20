@@ -3,21 +3,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
 .container{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to left,rgb(156, 67, 230), rgb(29, 182, 253));
     display: flex;
+    background: linear-gradient(to left,rgb(156, 67, 230), rgb(29, 182, 253));
     justify-content: center;
     align-items: center;
 }
 .navigation .logo{
+    display: flex;
+    margin: 0;
+}
+.navigation .logo h1{
     color: rgb(29, 182, 253) ;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     margin-bottom: 12px;
+    text-decoration: underline;
+}
+.navigation .logo img{
+    height: 40px;
+    width: 40px;
+    margin-top: 18px;
 }
 .music-player{
     text-align: center;
@@ -108,4 +119,10 @@
     transform: scale(1.5);
     background: rgb(29, 182, 253);
     color: white;
+}
+
+footer{
+    display: block;
+    bottom: 0;
+    margin-top: 10px;
 }

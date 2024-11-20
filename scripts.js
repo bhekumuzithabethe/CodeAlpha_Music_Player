@@ -76,3 +76,4 @@ function playPause() {
 next.addEventListener('click', nextSong);
 back.addEventListener('click', prevSong);
 play.addEventListener('click', playPause);
+song.addEventListener('ended', nextSong());
